@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Categories - Professional Online Book Store</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <!-- ==========================================
+       HEADER & NAVIGATION
+       ========================================== -->
+  <header>
+    <nav>
+      <a href="index.html" class="logo">📚 BookStore</a>
+      
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="books.html">Books</a></li>
+        <li><a href="categories.html">Categories</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+
+      <div class="nav-actions">
+        <div class="search-box">
+          <input type="text" placeholder="Search books...">
+          <span>🔍</span>
+        </div>
+        <button class="theme-toggle">🌙</button>
+        <a href="wishlist.html" class="wishlist-icon">❤️</a>
+        <a href="cart.html" class="cart-icon">
+          🛒
+          <span class="cart-count">0</span>
+        </a>
+        <a href="profile.html">👤</a>
+      </div>
+    </nav>
+  </header>
+
+  <!-- ==========================================
+       PAGE HEADER
+       ========================================== -->
+  <section class="hero" style="min-height: 200px;">
+    <h1>Book Categories</h1>
+    <p>Browse our extensive collection by category</p>
+  </section>
+
+  <!-- ==========================================
+       CATEGORIES GRID
+       ========================================== -->
+  <section class="container">
+    <div class="categories-grid">
+      <div class="category-card" onclick="goToBooks('Fiction')">
+        <div class="category-icon">📖</div>
+        <h3>Fiction</h3>
+        <p>Engaging stories and narratives</p>
+      </div>
+      <div class="category-card" onclick="goToBooks('Non-Fiction')">
+        <div class="category-icon">📚</div>
+        <h3>Non-Fiction</h3>
+        <p>True stories and real events</p>
+      </div>
+      <div class="category-card" onclick="goToBooks('Science')">
+        <div class="category-icon">🔬</div>
+        <h3>Science</h3>
+        <p>Scientific knowledge and discovery</p>
+      </div>
+      <div class="category-card" onclick="goToBooks('Technology')">
+        <div class="category-icon">💻</div>
+        <h3>Technology</h3>
+        <p>Tech, programming, and digital</p>
+      </div>
+      <div class="category-card" onclick="goToBooks('History')">
+        <div class="category-icon">🏛️</div>
+        <h3>History</h3>
+        <p>Historical events and timelines</p>
+      </div>
+      <div class="category-card" onclick="goToBooks('Biography')">
+        <div class="category-icon">👤</div>
+        <h3>Biography</h3>
+        <p>Life stories and memoirs</p>
+      </div>
+      <div class="category-card" onclick="goToBooks('Business')">
+        <div class="category-icon">💼</div>
+        <h3>Business</h3>
+        <p>Business guides and strategies</p>
+      </div>
+      <div class="category-card" onclick="goToBooks('Children\'s Books')">
+        <div class="category-icon">🧒</div>
+        <h3>Children's Books</h3>
+        <p>Stories for young readers</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================
+       FEATURED CATEGORIES
+       ========================================== -->
+  <section class="featured-section container">
+    <h2 class="section-title">Bestsellers by Category</h2>
+    <div class="books-grid" id="bestsellersByCategory"></div>
+  </section>
+
+  <!-- ==========================================
+       FOOTER
+       ========================================== -->
+  <footer>
+    <div class="footer-content">
+      <div class="footer-section">
+        <h3>Quick Links</h3>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="books.html">Books</a></li>
+          <li><a href="categories.html">Categories</a></li>
+          <li><a href="about.html">About Us</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h3>Categories</h3>
+        <ul>
+          <li><a href="books.html?category=Fiction">Fiction</a></li>
+          <li><a href="books.html?category=Non-Fiction">Non-Fiction</a></li>
+          <li><a href="books.html?category=Science">Science</a></li>
+          <li><a href="books.html?category=Technology">Technology</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h3>Customer Support</h3>
+        <ul>
+          <li><a href="contact.html">Contact Us</a></li>
+          <li><a href="#">FAQ</a></li>
+          <li><a href="#">Shipping Info</a></li>
+          <li><a href="#">Returns</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h3>Follow Us</h3>
+        <div class="social-links">
+          <a href="#" title="Facebook">f</a>
+          <a href="#" title="Twitter">𝕏</a>
+          <a href="#" title="Instagram">📷</a>
+          <a href="#" title="LinkedIn">in</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2024 Professional Book Store. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="js/script.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const bestsellers = document.querySelector('#bestsellersByCategory');
+      bestsellers.innerHTML = booksData.slice(0, 4).map(b => createBookCard(b)).join('');
+    });
+  </script>
+</body>
+</html>

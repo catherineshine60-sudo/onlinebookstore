@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us - Professional Online Book Store</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <!-- ==========================================
+       HEADER & NAVIGATION
+       ========================================== -->
+  <header>
+    <nav>
+      <a href="index.html" class="logo">📚 BookStore</a>
+      
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="books.html">Books</a></li>
+        <li><a href="categories.html">Categories</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+
+      <div class="nav-actions">
+        <div class="search-box">
+          <input type="text" placeholder="Search books...">
+          <span>🔍</span>
+        </div>
+        <button class="theme-toggle">🌙</button>
+        <a href="wishlist.html" class="wishlist-icon">❤️</a>
+        <a href="cart.html" class="cart-icon">
+          🛒
+          <span class="cart-count">0</span>
+        </a>
+        <a href="profile.html">👤</a>
+      </div>
+    </nav>
+  </header>
+
+  <!-- ==========================================
+       PAGE HEADER
+       ========================================== -->
+  <section class="hero" style="min-height: 250px;">
+    <h1>Contact Us</h1>
+    <p>We'd love to hear from you</p>
+  </section>
+
+  <!-- ==========================================
+       CONTACT SECTION
+       ========================================== -->
+  <section class="container">
+    <div class="contact-container">
+      <!-- CONTACT FORM -->
+      <form class="contact-form">
+        <h2>Send us a Message</h2>
+        
+        <div class="form-group">
+          <label for="name">Full Name</label>
+          <input type="text" id="name" required>
+        </div>
+
+        <div class="form-group">
+          <label for="email">Email Address</label>
+          <input type="email" id="email" required>
+        </div>
+
+        <div class="form-group">
+          <label for="subject">Subject</label>
+          <input type="text" id="subject" required>
+        </div>
+
+        <div class="form-group">
+          <label for="message">Message</label>
+          <textarea id="message" required></textarea>
+        </div>
+
+        <button type="button" class="btn btn-primary" onclick="alert('Thank you for your message! We will get back to you soon.'); document.querySelector('.contact-form').reset();">Send Message</button>
+      </form>
+
+      <!-- CONTACT INFO -->
+      <div class="contact-info">
+        <div class="contact-item">
+          <h3>📧 Email</h3>
+          <p>For general inquiries:</p>
+          <a href="mailto:lunabooknest@gmail.com">lunabooknest@gmail.com</a>
+          <p style="margin-top: 1rem;">For support:</p>
+          <a href="mailto:support@bookstore.com">lunasupport@gmail.com</a>
+        </div>
+
+        <div class="contact-item">
+          <h3>☎️ Phone</h3>
+          <p>Monday - Friday: 9AM - 6PM EST</p>
+          <a href="tel:+91 70101 50102>+91 70101 50102</a>
+          <p style="margin-top: 1rem;">Toll-free number</p>
+        </div>
+
+        <div class="contact-item">
+          <h3>💬 WhatsApp</h3>
+          <p>Chat with us on WhatsApp</p>
+          <a href="https://wa.me/18001234567" target="_blank">Start WhatsApp Chat 70101 50102</a>
+        </div>
+
+        <div class="contact-item">
+          <h3>📍 Address</h3>
+          <p>LUNA BOOKNEST Inc.<br>
+             no.15,Karunya nagar,<br>
+             opp GOOD SHEPHERD CHRUCH,<br>
+             PERUMALPURAM<br>
+             TIRUNELVELI -627007</p>
+         </div>
+
+        <div class="contact-item">
+          <h3>🕒 Business Hours</h3>
+          <p>Monday - Friday: 9:00 AM - 6:00 PM EST<br>
+             Saturday: 10:00 AM - 4:00 PM EST<br>
+             Sunday: Closed</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================
+       MAP SECTION
+       ========================================== -->
+  <section class="container" style="margin-top: 4rem;">
+    <h2 class="section-title">Find Us on the Map</h2>
+    <div style="background: var(--text-light); border-radius: 12px; overflow: hidden; box-shadow: var(--shadow-md); margin-bottom: 4rem;">
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3024.1234567890!2d-74.0059!3d40.7128!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c259a9ac1cedc1%3A0xacf60e1f21b21f0e!2s123%20Main%20St%2C%20New%20York%2C%20NY%2010001!5e0!3m2!1sen!2sus!4v1234567890123" 
+        width="100%" height="400" style="border:none;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+  </section>
+
+  <!-- ==========================================
+       FAQ SECTION
+       ========================================== -->
+  <section class="container">
+    <h2 class="section-title">Frequently Asked Questions</h2>
+    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; margin-bottom: 4rem;">
+      <div class="review-card">
+        <h3>What is your return policy?</h3>
+        <p>We offer 30-day returns for all books in good condition. Simply contact our support team to initiate the return process.</p>
+      </div>
+      <div class="review-card">
+        <h3>How long does shipping take?</h3>
+        <p>Standard shipping takes 5-7 business days. We also offer express shipping for orders that need to arrive faster.</p>
+      </div>
+      <div class="review-card">
+        <h3>Do you offer international shipping?</h3>
+        <p>no! currently,we only provide shipping within Tirunelveli and surrounding areas </p>
+      </div>
+       <div class="review-card">
+        <h3>Do you offer only Tirunelveli?</h3>
+        <p>Not sure! But Once we gain a larger audience,we plan to introduce to Thoothukudi,tensaki,ovari and kalakkadu.</p>
+      </div>
+      <div class="review-card">
+        <h3>Can I change my order?</h3>
+        <p>If your order hasn't been processed, contact us immediately. We'll do our best to help you make changes.</p>
+      </div>
+      <div class="review-card">
+        <h3>Do you have a physical store?</h3>
+        <p>Currently we operate online only, but you can visit our showroom by appointment. Call us for details.</p>
+      </div>
+      <div class="review-card">
+        <h3>How can I track my order?</h3>
+        <p>You'll receive a tracking number via email once your order ships. Use it to monitor your delivery status.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================
+       FOOTER
+       ========================================== -->
+  <footer>
+    <div class="footer-content">
+      <div class="footer-section">
+        <h3>Quick Links</h3>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="books.html">Books</a></li>
+          <li><a href="categories.html">Categories</a></li>
+          <li><a href="about.html">About Us</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h3>Categories</h3>
+        <ul>
+          <li><a href="books.html?category=Fiction">Fiction</a></li>
+          <li><a href="books.html?category=Non-Fiction">Non-Fiction</a></li>
+          <li><a href="books.html?category=Science">Science</a></li>
+          <li><a href="books.html?category=Technology">Technology</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h3>Customer Support</h3>
+        <ul>
+          <li><a href="contact.html">Contact Us</a></li>
+          <li><a href="#">FAQ</a></li>
+          <li><a href="#">Shipping Info</a></li>
+          <li><a href="#">Returns</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h3>Follow Us</h3>
+        <div class="social-links">
+          <a href="#" title="Facebook">f</a>
+          <a href="#" title="Twitter">𝕏</a>
+          <a href="#" title="Instagram">📷</a>
+          <a href="#" title="LinkedIn">in</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2024 Professional Book Store. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="js/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Profile - Professional Online Book Store</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <!-- ==========================================
+       HEADER & NAVIGATION
+       ========================================== -->
+  <header>
+    <nav>
+      <a href="index.html" class="logo">📚 BookStore</a>
+      
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="books.html">Books</a></li>
+        <li><a href="categories.html">Categories</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+
+      <div class="nav-actions">
+        <div class="search-box">
+          <input type="text" placeholder="Search books...">
+          <span>🔍</span>
+        </div>
+        <button class="theme-toggle">🌙</button>
+        <a href="wishlist.html" class="wishlist-icon">❤️</a>
+        <a href="cart.html" class="cart-icon">
+          🛒
+          <span class="cart-count">0</span>
+        </a>
+        <a href="profile.html">👤</a>
+      </div>
+    </nav>
+  </header>
+
+  <!-- ==========================================
+       PAGE HEADER
+       ========================================== -->
+  <section class="hero" style="min-height: 200px;">
+    <h1>My Profile</h1>
+  </section>
+
+  <!-- ==========================================
+       PROFILE CONTAINER
+       ========================================== -->
+  <section class="container">
+    <div class="profile-container">
+      <!-- SIDEBAR -->
+      <div class="profile-sidebar">
+        <div class="profile-avatar">👤</div>
+        <ul class="profile-nav">
+          <li><button data-section="info" class="active" onclick="switchProfileSection('info')">Personal Info</button></li>
+          <li><button data-section="orders" onclick="switchProfileSection('orders')">Order History</button></li>
+          <li><button data-section="wishlist" onclick="switchProfileSection('wishlist')">Wishlist</button></li>
+          <li><button data-section="settings" onclick="switchProfileSection('settings')">Settings</button></li>
+        </ul>
+      </div>
+
+      <!-- CONTENT AREA -->
+      <div class="profile-content">
+        <!-- Personal Info Section -->
+        <div class="profile-section active" data-section="info">
+          <h2>Personal Information</h2>
+          <div class="info-group">
+            <label>Full UserName</label>
+            <input type="text" id="profileUsername">
+          </div>
+          <div class="info-group">
+            <label>Email</label>
+           <input type="email" id="profileEmail">
+           </div>
+          <div class="info-group">
+            <label>password</label>
+          <input type="password" id="profilePassword">
+          </div>
+          </div>
+       <!-- Order History Section -->
+        <div class="profile-section" data-section="orders">
+          <h2>Order History</h2>
+          <!-- Orders will be populated by JavaScript -->
+        </div>
+
+        <!-- Wishlist Section -->
+        <div class="profile-section" data-section="wishlist">
+          <h2>My Wishlist</h2>
+          <!-- Wishlist will be populated by JavaScript -->
+        </div>
+
+        <!-- Settings Section -->
+        <div class="profile-section" data-section="settings">
+          <h2>Account Settings</h2>
+          <div class="info-group">
+            <label>
+              <input type="checkbox" checked> Receive newsletter emails
+            </label>
+          </div>
+          <div class="info-group">
+            <label>
+              <input type="checkbox" checked> Receive order updates
+            </label>
+          </div>
+          <div class="info-group">
+            <label>
+              <input type="checkbox"> Receive promotional offers
+            </label>
+          </div>
+          <div style="margin-top: 2rem; padding-top: 2rem; border-top: 1px solid var(--border-color);">
+            <h3 style="color: #e94560; margin-bottom: 1rem;">Danger Zone</h3>
+            <button class="btn btn-small"
+style="background: #ff6b6b; color: white; padding: 0.8rem 2rem;"
+onclick="deleteAccount()">Delete Account</button>
+<script src="js/script.js"></script>
+<script>
+function deleteAccount() {
+
+    if (confirm("Are you sure you want to delete your account?")) {
+
+        // Delete all saved data
+        localStorage.removeItem("user");
+        localStorage.removeItem("currentUser");
+        localStorage.removeItem("cart");
+        localStorage.removeItem("wishlist");
+        localStorage.removeItem("orders");
+
+        // Go to login page
+        window.location.href = "login.html";
+    }
+}
+</script>       
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================
+       FOOTER
+       ========================================== -->
+  <footer>
+    <div class="footer-content">
+      <div class="footer-section">
+        <h3>Quick Links</h3>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="books.html">Books</a></li>
+          <li><a href="categories.html">Categories</a></li>
+          <li><a href="about.html">About Us</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h3>Categories</h3>
+        <ul>
+          <li><a href="books.html?category=Fiction">Fiction</a></li>
+          <li><a href="books.html?category=Non-Fiction">Non-Fiction</a></li>
+          <li><a href="books.html?category=Science">Science</a></li>
+          <li><a href="books.html?category=Technology">Technology</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h3>Customer Support</h3>
+        <ul>
+          <li><a href="contact.html">Contact Us</a></li>
+          <li><a href="#">FAQ</a></li>
+          <li><a href="#">Shipping Info</a></li>
+          <li><a href="#">Returns</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h3>Follow Us</h3>
+        <div class="social-links">
+          <a href="#" title="Facebook">f</a>
+          <a href="#" title="Twitter">𝕏</a>
+          <a href="#" title="Instagram">📷</a>
+          <a href="#" title="LinkedIn">in</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2024 Professional Book Store. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="js/script.js"></script>
+<script>
+const user = JSON.parse(localStorage.getItem("user"));
+
+if (user) {
+    document.getElementById("profileUsername").value = user.username;
+    document.getElementById("profileEmail").value = user.email;
+    document.getElementById("profilePassword").value = user.password;
+}
+</script>
+</body>
+</html>

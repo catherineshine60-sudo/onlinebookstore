@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shopping Cart - Professional Online Book Store</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <!-- ==========================================
+       HEADER & NAVIGATION
+       ========================================== -->
+  <header>
+    <nav>
+      <a href="index.html" class="logo">📚 BookStore</a>
+      
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="books.html">Books</a></li>
+        <li><a href="categories.html">Categories</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+
+      <div class="nav-actions">
+        <div class="search-box">
+          <input type="text" placeholder="Search books...">
+          <span>🔍</span>
+        </div>
+        <button class="theme-toggle">🌙</button>
+        <a href="wishlist.html" class="wishlist-icon">❤️</a>
+        <a href="cart.html" class="cart-icon">
+          🛒
+          <span class="cart-count">0</span>
+        </a>
+        <a href="profile.html">👤</a>
+      </div>
+    </nav>
+  </header>
+
+  <!-- ==========================================
+       PAGE HEADER
+       ========================================== -->
+  <section class="hero" style="min-height: 200px;">
+    <h1>Shopping Cart</h1>
+  </section>
+
+  <!-- ==========================================
+       CART CONTAINER
+       ========================================== -->
+  <section class="container">
+    <div class="cart-container">
+      <div class="cart-items"></div>
+      <div class="cart-summary">
+        <h3>Order Summary</h3>
+        <div class="summary-row">
+          <span>Subtotal:</span>
+          <span>₹0.00</span>
+        </div>
+        <div class="summary-row">
+          <span>Shipping:</span>
+          <span>Free</span>
+        </div>
+        <div class="summary-row">
+          <span>Tax:</span>
+          <span>₹0.00</span>
+        </div>
+        <div class="summary-row total">
+          <span>Total:</span>
+          <span>₹0.00</span>
+        </div>
+        <a href="https://wa.me/917010150102?text=Hello%20LunaBookNest,%20I%20need%20assistance%20with%20my%20order."
+   class="checkout-btn"
+   target="_blank"
+   style="
+      display:block;
+      width:100%;
+      text-align:center;
+      text-decoration:none;
+      background:#25D366;
+      color:white;
+      padding:15px;
+      border-radius:8px;
+      font-weight:600;
+      margin-top:15px;">
+   💬 Contact Us on WhatsApp
+    <p style="margin-top:10px;color:#666;font-size:14px;text-align:center;">
+For payments, book availability, and any doubts, contact us on WhatsApp:
+<strong>+91 70101 50102</strong>
+</p>
+   </a>
+        <a href="books.html" class="btn btn-secondary" style="width: 100%; margin-top: 1rem; text-align: center;">Continue Shopping</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================
+       FOOTER
+       ========================================== -->
+  <footer>
+    <div class="footer-content">
+      <div class="footer-section">
+        <h3>Quick Links</h3>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="books.html">Books</a></li>
+          <li><a href="categories.html">Categories</a></li>
+          <li><a href="about.html">About Us</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h3>Categories</h3>
+        <ul>
+          <li><a href="books.html?category=Fiction">Fiction</a></li>
+          <li><a href="books.html?category=Non-Fiction">Non-Fiction</a></li>
+          <li><a href="books.html?category=Science">Science</a></li>
+          <li><a href="books.html?category=Technology">Technology</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h3>Customer Support</h3>
+        <ul>
+          <li><a href="contact.html">Contact Us</a></li>
+          <li><a href="#">FAQ</a></li>
+          <li><a href="#">Shipping Info</a></li>
+          <li><a href="#">Returns</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h3>Follow Us</h3>
+        <div class="social-links">
+          <a href="#" title="Facebook">f</a>
+          <a href="#" title="Twitter">𝕏</a>
+          <a href="#" title="Instagram">📷</a>
+          <a href="#" title="LinkedIn">in</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2024 Professional Book Store. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="js/script.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      displayCart();
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Professional Online Book Store - Home</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <!-- ==========================================
+       HEADER & NAVIGATION
+       ========================================== -->
+  <header>
+    <nav>
+      <a href="index.html" class="logo">📚 BookStore</a>
+      
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="books.html">Books</a></li>
+        <li><a href="categories.html">Categories</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="login.html">login</a></li>
+      </ul>
+
+      <div class="nav-actions">
+        <div class="search-box">
+          <input type="text" placeholder="Search books..." class="nav-search">
+          <span>🔍</span>
+        </div>
+        <button class="theme-toggle">🌙</button>
+        <a href="wishlist.html" class="wishlist-icon">❤️</a>
+        <a href="cart.html" class="cart-icon">
+          🛒
+          <span class="cart-count">0</span>
+        </a>
+        <a href="profile.html">👤</a>
+      </div>
+    </nav>
+  </header>
+
+  <!-- ==========================================
+       HERO SECTION
+       ========================================== -->
+  <section class="hero">
+    <h1>Welcome to Our Book Store</h1>
+    <p>Discover thousands of books from around the world</p>
+    <div class="hero-search">
+      <input type="text" placeholder="Search for books, authors, categories...">
+      <button onclick="searchBooks(document.querySelector('.hero-search input').value)">Search</button>
+    </div>
+  </section>
+
+  <!-- ==========================================
+       FEATURED BOOKS SECTION
+       ========================================== -->
+  <section class="container">
+    <h2 class="section-title">Featured Books</h2>
+    <div class="books-grid" id="featuredBooks"></div>
+  </section>
+
+  <!-- ==========================================
+       BEST SELLERS SECTION
+       ========================================== -->
+  <section class="featured-section container">
+    <h2 class="section-title">Best Sellers</h2>
+    <div class="books-grid" id="bestSellers"></div>
+  </section>
+
+  <!-- ==========================================
+       NEW ARRIVALS SECTION
+       ========================================== -->
+  <section class="container">
+    <h2 class="section-title">New Arrivals</h2>
+    <div class="books-grid" id="newArrivals"></div>
+  </section>
+
+  <!-- ==========================================
+       CATEGORIES SECTION
+       ========================================== -->
+  <section class="container">
+    <h2 class="section-title">Categories</h2>
+    <div class="categories-grid">
+      <div class="category-card" onclick="goToBooks('Fiction')">
+        <div class="category-icon">📖</div>
+        <h3>Fiction</h3>
+        <p>Engaging stories</p>
+      </div>
+      <div class="category-card" onclick="goToBooks('Non-Fiction')">
+        <div class="category-icon">📚</div>
+        <h3>Non-Fiction</h3>
+        <p>True stories</p>
+      </div>
+      <div class="category-card" onclick="goToBooks('Science')">
+        <div class="category-icon">🔬</div>
+        <h3>Science</h3>
+        <p>Scientific knowledge</p>
+      </div>
+      <div class="category-card" onclick="goToBooks('Technology')">
+        <div class="category-icon">💻</div>
+        <h3>Technology</h3>
+        <p>Tech & programming</p>
+      </div>
+      <div class="category-card" onclick="goToBooks('History')">
+        <div class="category-icon">🏛️</div>
+        <h3>History</h3>
+        <p>Historical events</p>
+      </div>
+      <div class="category-card" onclick="goToBooks('Biography')">
+        <div class="category-icon">👤</div>
+        <h3>Biography</h3>
+        <p>Life stories</p>
+      </div>
+      <div class="category-card" onclick="goToBooks('Business')">
+        <div class="category-icon">💼</div>
+        <h3>Business</h3>
+        <p>Business guides</p>
+      </div>
+      <div class="category-card" onclick="goToBooks('Children\'s Books')">
+        <div class="category-icon">🧒</div>
+        <h3>Children's</h3>
+        <p>For young readers</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================
+       CUSTOMER REVIEWS SECTION
+       ========================================== -->
+  <section class="container">
+    <h2 class="section-title">Customer Reviews</h2>
+    <div class="reviews-grid">
+      <div class="review-card">
+        <div class="review-header">
+          <div class="review-avatar">JD</div>
+          <div>
+            <h3>John Doe</h3>
+            <div class="review-rating">⭐⭐⭐⭐⭐</div>
+          </div>
+        </div>
+        <p class="review-text">"Excellent collection and fast delivery. Highly recommend!"</p>
+      </div>
+      <div class="review-card">
+        <div class="review-header">
+          <div class="review-avatar">SM</div>
+          <div>
+            <h3>Sarah Miller</h3>
+            <div class="review-rating">⭐⭐⭐⭐⭐</div>
+          </div>
+        </div>
+        <p class="review-text">"Found exactly what I was looking for. Great prices too!"</p>
+      </div>
+      <div class="review-card">
+        <div class="review-header">
+          <div class="review-avatar">MJ</div>
+          <div>
+            <h3>Michael Johnson</h3>
+            <div class="review-rating">⭐⭐⭐⭐</div>
+          </div>
+        </div>
+        <p class="review-text">"Very satisfied with my purchase. Will buy again!"</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================
+       NEWSLETTER SECTION
+       ========================================== -->
+  <section class="container">
+    <div class="newsletter-section">
+      <h2>Subscribe to Our Newsletter</h2>
+      <p>Get the latest book recommendations and exclusive offers</p>
+      <div class="newsletter-form">
+        <input type="email" placeholder="Enter your email">
+        <button>Subscribe</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================
+       FOOTER
+       ========================================== -->
+  <footer>
+    <div class="footer-content">
+      <div class="footer-section">
+        <h3>Quick Links</h3>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="books.html">Books</a></li>
+          <li><a href="categories.html">Categories</a></li>
+          <li><a href="about.html">About Us</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h3>Categories</h3>
+        <ul>
+          <li><a href="books.html?category=Fiction">Fiction</a></li>
+          <li><a href="books.html?category=Non-Fiction">Non-Fiction</a></li>
+          <li><a href="books.html?category=Science">Science</a></li>
+          <li><a href="books.html?category=Technology">Technology</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h3>Customer Support</h3>
+        <ul>
+          <li><a href="contact.html">Contact Us</a></li>
+          <li><a href="#">FAQ</a></li>
+          <li><a href="#">Shipping Info</a></li>
+          <li><a href="#">Returns</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h3>Follow Us</h3>
+        <div class="social-links">
+          <a href="#" title="Facebook">f</a>
+          <a href="#" title="Twitter">𝕏</a>
+          <a href="#" title="Instagram">📷</a>
+          <a href="#" title="LinkedIn">in</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2024 Professional Book Store. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="js/script.js"></script>
+  <script>
+    // Initialize home page with sample books
+    document.addEventListener('DOMContentLoaded', () => {
+      const featured = document.querySelector('#featuredBooks');
+      const bestSellers = document.querySelector('#bestSellers');
+      const newArrivals = document.querySelector('#newArrivals');
+
+      if (featured) featured.innerHTML = booksData.slice(0, 6).map(b => createBookCard(b)).join('');
+      if (bestSellers) bestSellers.innerHTML = booksData.slice(0, 4).map(b => createBookCard(b)).join('');
+      if (newArrivals) newArrivals.innerHTML = booksData.slice(3, 9).map(b => createBookCard(b)).join('');
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 340" role="img" aria-label="A Brief History of Time book cover">
+  <rect width="240" height="340" fill="#07121f"/>
+  <rect x="18" y="18" width="204" height="304" rx="10" fill="#0d2740" stroke="#a7d8ff" stroke-width="4"/>
+  <circle cx="120" cy="144" r="58" fill="none" stroke="#a7d8ff" stroke-width="5"/>
+  <circle cx="120" cy="144" r="15" fill="#f7d45f"/>
+  <path d="M65 144c36-28 74-28 110 0M65 144c36 28 74 28 110 0" stroke="#ffffff" stroke-width="4" fill="none"/>
+  <text x="120" y="262" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" font-weight="700" fill="#ffffff">TIME</text>
+</svg>

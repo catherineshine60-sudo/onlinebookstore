@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chatbot - Professional Online Book Store</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <!-- ==========================================
+       HEADER & NAVIGATION
+       ========================================== -->
+  <header>
+    <nav>
+      <a href="index.html" class="logo">📚 BookStore</a>
+      
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="books.html">Books</a></li>
+        <li><a href="categories.html">Categories</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+
+      <div class="nav-actions">
+        <div class="search-box">
+          <input type="text" placeholder="Search books...">
+          <span>🔍</span>
+        </div>
+        <button class="theme-toggle">🌙</button>
+        <a href="wishlist.html" class="wishlist-icon">❤️</a>
+        <a href="cart.html" class="cart-icon">
+          🛒
+          <span class="cart-count">0</span>
+        </a>
+        <a href="profile.html">👤</a>
+      </div>
+    </nav>
+  </header>
+
+  <!-- ==========================================
+       PAGE HEADER
+       ========================================== -->
+  <section class="hero" style="min-height: 200px;">
+    <h1>AI Book Assistant</h1>
+    <p>Get personalized book recommendations and support</p>
+  </section>
+
+  <!-- ==========================================
+       CHATBOT CONTAINER
+       ========================================== -->
+  <section class="container">
+    <div class="chatbot-container">
+      <div class="chat-header">
+        <h2>🤖 BookStore AI Assistant</h2>
+        <p>How can I help you find the perfect book?</p>
+      </div>
+      <div class="chat-messages">
+        <div class="message bot">
+          <div class="message-content">Hi! 👋 I'm your BookStore AI Assistant. I can help you find book recommendations, answer questions about your orders, or provide information about our store. How can I help you today?</div>
+        </div>
+        <div class="message bot">
+          <div class="message-content">Try asking me about:
+            <br>• Book recommendations
+            <br>• Shipping & Returns
+            <br>• Categories (Fiction, Tech, Science, etc.)
+            <br>• Pricing & Offers
+            <br>• Customer Service</div>
+        </div>
+      </div>
+      <div class="chat-input">
+        <input type="text" placeholder="Type your message...">
+        <button onclick="sendChatMessage()">Send</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================
+       QUICK HELP SECTION
+       ========================================== -->
+  <section class="container">
+    <h2 class="section-title">Quick Help Topics</h2>
+    <div class="reviews-grid">
+      <div class="review-card" style="cursor: pointer;" onclick="document.querySelector('.chat-input input').value = 'What book would you recommend?'; sendChatMessage();">
+        <h3>📚 Book Recommendations</h3>
+        <p>Get personalized book suggestions based on your interests</p>
+      </div>
+      <div class="review-card" style="cursor: pointer;" onclick="document.querySelector('.chat-input input').value = 'Tell me about shipping'; sendChatMessage();">
+        <h3>🚚 Shipping Information</h3>
+        <p>Learn about our delivery options and costs</p>
+      </div>
+      <div class="review-card" style="cursor: pointer;" onclick="document.querySelector('.chat-input input').value = 'What is your return policy?'; sendChatMessage();">
+        <h3>↩️ Returns & Refunds</h3>
+        <p>Understand our easy return process</p>
+      </div>
+      <div class="review-card" style="cursor: pointer;" onclick="document.querySelector('.chat-input input').value = 'What technologies do you have?'; sendChatMessage();">
+        <h3>💻 Tech Books</h3>
+        <p>Browse our collection of technology books</p>
+      </div>
+      <div class="review-card" style="cursor: pointer;" onclick="document.querySelector('.chat-input input').value = 'How can I contact support?'; sendChatMessage();">
+        <h3>📞 Contact Support</h3>
+        <p>Get contact information and support options</p>
+      </div>
+      <div class="review-card" style="cursor: pointer;" onclick="document.querySelector('.chat-input input').value = 'What about fiction books?'; sendChatMessage();">
+        <h3>📖 Fiction Collection</h3>
+        <p>Explore our extensive fiction selection</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================
+       FAQ SECTION
+       ========================================== -->
+  <section class="featured-section container">
+    <h2 class="section-title">Common Questions</h2>
+    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 2rem;">
+      <div>
+        <h3>❓ Q: How do I search for books?</h3>
+        <p>Use the search bar in the navigation menu or visit our Books page to browse and filter by category, price, or rating.</p>
+      </div>
+      <div>
+        <h3>❓ Q: Can I save books for later?</h3>
+        <p>Yes! Click the heart icon on any book card to add it to your wishlist. You can view your wishlist anytime.</p>
+      </div>
+      <div>
+        <h3>❓ Q: How do I track my order?</h3>
+        <p>Once your order ships, you'll receive an email with a tracking number. Use it to monitor your delivery status.</p>
+      </div>
+      <div>
+        <h3>❓ Q: Is there a dark mode?</h3>
+        <p>Yes! Click the moon icon in the top navigation to switch to dark mode. Your preference is saved automatically.</p>
+      </div>
+      <div>
+        <h3>❓ Q: Do you offer gift cards?</h3>
+        <p>Currently gift cards are available through our customer support team. Contact us for more information.</p>
+      </div>
+      <div>
+        <h3>❓ Q: Can I subscribe to newsletters?</h3>
+        <p>Yes! Subscribe to our newsletter in the footer section to get the latest book recommendations and exclusive offers.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================
+       FOOTER
+       ========================================== -->
+  <footer>
+    <div class="footer-content">
+      <div class="footer-section">
+        <h3>Quick Links</h3>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="books.html">Books</a></li>
+          <li><a href="categories.html">Categories</a></li>
+          <li><a href="about.html">About Us</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h3>Categories</h3>
+        <ul>
+          <li><a href="books.html?category=Fiction">Fiction</a></li>
+          <li><a href="books.html?category=Non-Fiction">Non-Fiction</a></li>
+          <li><a href="books.html?category=Science">Science</a></li>
+          <li><a href="books.html?category=Technology">Technology</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h3>Customer Support</h3>
+        <ul>
+          <li><a href="contact.html">Contact Us</a></li>
+          <li><a href="#">FAQ</a></li>
+          <li><a href="#">Shipping Info</a></li>
+          <li><a href="#">Returns</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h3>Follow Us</h3>
+        <div class="social-links">
+          <a href="#" title="Facebook">f</a>
+          <a href="#" title="Twitter">𝕏</a>
+          <a href="#" title="Instagram">📷</a>
+          <a href="#" title="LinkedIn">in</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2024 Professional Book Store. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
